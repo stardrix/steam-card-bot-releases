@@ -1,8 +1,0 @@
-node_modules/
-dist/
-*.log
-.env
-config/
-userdata/
-bots.json
-license.dat
