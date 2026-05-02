@@ -336,7 +336,8 @@ Questions, bugs, or feature requests:
 
 ## Requirements
 
-- Windows 10/11 (x64) or Linux (x64)
+- Windows 10/11 (x64)
+- Linux (x64) — coming soon
 - A Steam account dedicated to being the bot
 - Steam Web API Key ([get one here](https://steamcommunity.com/dev/apikey))
 - Shared Secret and Identity Secret from your Steam authenticator (SteamDesktopAuthenticator or WinAuth)
