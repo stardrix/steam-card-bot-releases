@@ -18,6 +18,7 @@ Steam Card Bot is a Windows / Linux desktop application built on Electron. It co
 |---|---|---|
 | Normal card sets | ✅ | ✅ |
 | Foil card sets | ✅ | ✅ |
+| Event card sets | ✅ | ✅ |
 | TF2 Keys | ✅ | ✅ |
 | Tour of Duty Tickets | ✅ | ✅ |
 | CS2 Keys | ✅ | ✅ |
