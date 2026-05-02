@@ -1,5 +1,7 @@
 # Steam Card Bot
 
+[![Latest Release](https://img.shields.io/github/v/release/stardrix/steam-card-bot-releases?label=Latest%20Release&style=for-the-badge)](https://github.com/stardrix/steam-card-bot-releases/releases/latest)
+
 > Automated Steam card set trading bot with a full desktop dashboard - supports multiple bots, live rate management, per-game withdrawals, and bot-initiated-only trade flow.
 
 **[Get a license](https://www.steamtradebots.com/) · [Join Discord](https://discord.gg/XCtgnPsZFU) · [Report an issue](https://github.com/stardrix/steam-card-bot-releases/issues)**
