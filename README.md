@@ -1,6 +1,6 @@
 # Steam Card Bot
 
-> Automated Steam card set trading bot with a full desktop dashboard — supports multiple bots, live rate management, per-game withdrawals, and bot-initiated-only trade flow.
+> Automated Steam card set trading bot with a full desktop dashboard - supports multiple bots, live rate management, per-game withdrawals, and bot-initiated-only trade flow.
 
 **[Get a license](https://www.steamtradebots.com/) · [Join Discord](https://discord.gg/XCtgnPsZFU) · [Report an issue](https://github.com/stardrix/steam-card-bot-releases/issues)**
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-Steam Card Bot is a Windows / Linux desktop application built on Electron. It connects one or more Steam bot accounts, manages your card set inventory automatically, and executes trades via Steam chat commands — the bot always sends the trade offer, keeping you in full control of every transaction.
+Steam Card Bot is a Windows / Linux desktop application built on Electron. It connects one or more Steam bot accounts, manages your card set inventory automatically, and executes trades via Steam chat commands - the bot always sends the trade offer, keeping you in full control of every transaction.
 
 ### What it trades
 
@@ -26,20 +26,47 @@ Steam Card Bot is a Windows / Linux desktop application built on Electron. It co
 
 ## Key Features
 
-- **Multi-bot support** — run and manage multiple Steam bot accounts from one dashboard, each with its own credentials, rates, and inventory
-- **Bot Overview** — live grid showing every bot's status, trade count, uptime, and username at a glance; start or stop individual bots directly from the grid
-- **Start All / Stop All** — launch or shut down all configured bots in one click; failed bots are highlighted in red with the specific reason displayed
-- **Bot-initiated trade flow** — users interact via Steam chat commands; the bot always sends the trade offer so no unsolicited incoming offers are processed
-- **Badge-aware set selection** — the bot checks a user's Steam badge level before sending sets, so it only sends sets the user can still craft (respects the 5-level cap per game; 1-level cap for foil)
-- **Per-game withdraw** — withdraw card sets from a specific game by AppID, with a searchable in-app game list so you never have to look up an AppID manually
-- **Rate Simulator** — preview exactly what the bot will send for any currency and quantity before going live; includes stock warnings if the bot doesn't have enough inventory
-- **Live rate editing** — change buy/sell rates and they apply to the running bot instantly, no restart needed
-- **Listing integrations** — automatic sync to SteamTradeBots.com, Steam.supply, and Steambot.info whenever rates change
-- **Supply Feed** — auto-adjust rates based on live competitor prices with six price modes
-- **Persistent trade history** — full log of every accepted and declined trade, filterable by Today / 7 Days / 30 Days, survives restarts
-- **Profit tracking** — net profit per currency tracked per bot
-- **Maintenance** — auto-manage friend lists, spam protection, ban detection, and cleanup schedules
-- **Auto-update** — new releases are downloaded and installed silently in the background
+- **Multi-bot support**:
+run and manage multiple Steam bot accounts from one dashboard, each with its own credentials, rates, and inventory
+
+- **Bot Overview**:
+live grid showing every bot's status, trade count, uptime, and username at a glance; start or stop individual bots directly from the grid
+
+- **Start All / Stop All**:
+launch or shut down all configured bots in one click; failed bots are highlighted in red with the specific reason displayed
+
+- **Bot-initiated trade flow**:
+users interact via Steam chat commands; the bot always sends the trade offer so no unsolicited incoming offers are processed
+
+- **Badge-aware set selection**:
+the bot checks a user's Steam badge level before sending sets, so it only sends sets the user can still craft (respects the 5-level cap per game; 1-level cap for foil)
+
+- **Per-game withdraw**:
+withdraw card sets from a specific game by AppID, with a searchable in-app game list so you never have to look up an AppID manually
+
+- **Rate Simulator**:
+preview exactly what the bot will send for any currency and quantity before going live; includes stock warnings if the bot doesn't have enough inventory
+
+- **Live rate editing**:
+change buy/sell rates and they apply to the running bot instantly, no restart needed
+
+- **Listing integrations**:
+automatic sync to SteamTradeBots.com, Steam.supply, and Steambot.info whenever rates change
+
+- **Supply Feed**:
+auto-adjust rates based on live competitor prices with six price modes
+
+- **Persistent trade history**:
+full log of every accepted and declined trade, filterable by Today / 7 Days / 30 Days, survives restarts
+
+- **Profit tracking**:
+net profit per currency tracked per bot
+
+- **Maintenance**:
+auto-manage friend lists, spam protection, ban detection, and cleanup schedules
+
+- **Auto-update**:
+new releases are downloaded and installed silently in the background
 
 ---
 
@@ -48,7 +75,7 @@ Steam Card Bot is a Windows / Linux desktop application built on Electron. It co
 1. Install the app and activate your license
 2. Add your Steam bot account credentials (username, password, shared secret, identity secret)
 3. Set your buy and sell rates in the Rates tab
-4. Start the bot — it logs into Steam, fetches inventory, and posts your listing
+4. Start the bot - it logs into Steam, fetches inventory, and posts your listing
 5. Users send a chat command like `!BUYTF2 2`; the bot calculates the sets, checks their badge level, and sends them a trade offer
 
 Users **cannot** push trade offers directly to the bot. All trades originate from the bot, giving you complete control over what gets sent and when.
@@ -87,7 +114,7 @@ Configure per-bot Steam credentials and access settings:
 | Steam Username | The bot account's login name |
 | Steam Password | Account password (stored encrypted) |
 | Steam Web API Key | Required for trade offer processing |
-| Shared Secret | 2FA — the bot generates codes automatically |
+| Shared Secret | 2FA - the bot generates codes automatically |
 | Identity Secret | Auto-confirms trades, no phone needed |
 | Admin Steam IDs | These accounts bypass all rate checks |
 | Owner Profile URL | Shown when users type `!OWNER` |
@@ -110,7 +137,7 @@ Fine-tune how the bot behaves: card mode (normal, foil, or event cards), persona
 
 ## Commands
 
-Enable or disable individual currencies and chat commands without restarting the bot. Toggle a currency off to fully disable it — the bot won't trade or respond to commands for it. Toggle individual commands off to block just that action while keeping the currency active.
+Enable or disable individual currencies and chat commands without restarting the bot. Toggle a currency off to fully disable it - the bot won't trade or respond to commands for it. Toggle individual commands off to block just that action while keeping the currency active.
 
 ![Commands](https://www.steamtradebots.com/assets/images/Bots/SteamCadBot/Commands.png)
 
@@ -125,7 +152,7 @@ Set how many card sets the bot gives or requires per unit of currency. Four key 
 | **BUY** (sets/unit) | Sets the bot sends to the user per currency unit the user gives |
 | **SELL** (sets/unit) | Sets the user must give per currency unit the bot sends back |
 
-Rate changes apply to the running bot instantly — no restart required.
+Rate changes apply to the running bot instantly - no restart required.
 
 ### Rate Simulator
 
@@ -134,7 +161,7 @@ A built-in calculator at the bottom of the Rates tab lets you preview trade outc
 1. Pick a currency (TF2, ToD, CS2, Hydra, or Gems)
 2. Pick a direction (BUY or SELL)
 3. Enter a quantity
-4. Click **Simulate** — see exactly how many sets or keys the bot would send, with a warning if current stock is too low
+4. Click **Simulate** - see exactly how many sets or keys the bot would send, with a warning if current stock is too low
 
 ![Rates](https://www.steamtradebots.com/assets/images/Bots/SteamCadBot/Rates.png)
 
@@ -182,7 +209,7 @@ Send items from the bot's inventory to any Steam account. Admin only.
 
 ### Per-game withdrawal
 
-The Card Sets field includes an optional **Game** search input. Type a game name or AppID and select from the dropdown — the bot will only withdraw sets from that specific game. A scrollable game list on the right shows every game in the bot's inventory sorted by set count, with AppID and name visible. Click any row to fill the field automatically.
+The Card Sets field includes an optional **Game** search input. Type a game name or AppID and select from the dropdown - the bot will only withdraw sets from that specific game. A scrollable game list on the right shows every game in the bot's inventory sorted by set count, with AppID and name visible. Click any row to fill the field automatically.
 
 Leave the field empty to withdraw sets from across all games (default behaviour).
 
@@ -200,7 +227,7 @@ Displays the bot's trade URL so you can send items to it directly from another S
 
 ## Trade History
 
-Persistent trade log — survives bot restarts. Filter by **Today**, **7 Days**, or **30 Days**. Summary cards show:
+Persistent trade log - survives bot restarts. Filter by **Today**, **7 Days**, or **30 Days**. Summary cards show:
 
 - Accepted and declined trade counts
 - Net card sets received vs sent
