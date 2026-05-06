@@ -2,7 +2,7 @@
 
 [![Latest Release](https://img.shields.io/github/v/release/stardrix/steam-card-bot-releases?label=Latest%20Release&style=for-the-badge)](https://github.com/stardrix/steam-card-bot-releases/releases/latest)
 
-> Automated Steam card set trading bot with a full desktop dashboard - supports multiple bots, live rate management, per-game withdrawals, and bot-initiated-only trade flow.
+> The ultimate **Steam card bot for a level up profile**. An automated Steam card set trading bot with a full desktop dashboard - supports multiple bots, live rate management, per-game withdrawals, and bot-initiated-only trade flow. Fully integrated with the #1 **Steam bot listing** directory.
 
 **[Get a license](https://www.steamtradebots.com/) · [Join Discord](https://discord.gg/XCtgnPsZFU) · [Report an issue](https://github.com/stardrix/steam-card-bot-releases/issues)**
 
@@ -24,6 +24,15 @@ Steam Card Bot is a Windows / Linux desktop application built on Electron. It co
 | CS2 Keys | ✅ | ✅ |
 | Hydra Keys | ✅ | ✅ |
 | Gems (Sack of Gems) | ✅ | ✅ |
+
+---
+
+## 🌐 The SteamTradeBots Ecosystem
+
+To get the most out of your bot and build trust with your users, take advantage of our full ecosystem:
+
+- **📈 Get Traffic (Bot Directory):** Don't just run a bot get customers! Submit your account to our official **[Steam Bot Listing](https://www.steamtradebots.com/)** to display your live stock and rates to thousands of users looking to level up their profiles.
+- **🛡️ Build Trust (Chrome Extension):** Tell your customers to install the **[SteamTradeBots Verified Extension](https://chromewebstore.google.com/detail/steamtradebots-verified-b/ifbjmpaibhdfjemngaajlmijgopcaopk)**. It places a green "Verified Bot" banner directly on your bot's Steam profile, proving your legitimacy and protecting your users from impersonation scams.
 
 ---
 
@@ -176,7 +185,7 @@ Connect API keys for up to three listing services. Rates and stock sync automati
 
 | Service | What it does |
 |---|---|
-| SteamTradeBots.com | Posts bot status, all buy/sell rates, total card set stock, key/gem counts, and a full per-game set breakdown (how many sets per AppID) |
+| SteamTradeBots.com | **(Recommended)** The #1 verified **Steam bot listing**. Posts bot status, all buy/sell rates, total card set stock, key/gem counts, and a full per-game set breakdown. Integrates with the STB Chrome Extension for verified profile banners. |
 | Steam.supply | Posts buy/sell rates for TF2, CS2, Hydra, ToD keys and gems, current key/gem stock, and per-game set counts |
 | Steambot.info | Posts buy/sell rates for TF2, CS2, Hydra, ToD keys and gems, and a full per-game set breakdown so buyers can see exactly which games you stock |
 
