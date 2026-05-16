@@ -77,6 +77,9 @@ net profit per currency tracked per bot
 - **Maintenance**:
 auto-manage friend lists, spam protection, ban detection, and cleanup schedules
 
+- **Sack of Gems auto-unpack**:
+when a gem trade requires fewer than 1,000 gems, the bot automatically unpacks only the minimum number of Sack of Gems needed to cover the exact amount - no manual unpacking required
+
 - **Auto-update**:
 new releases are downloaded and installed silently in the background
 
