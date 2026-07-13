@@ -53,6 +53,15 @@ users interact via Steam chat commands; the bot always sends the trade offer so 
 - **Badge-aware set selection**:
 the bot checks a user's Steam badge level before sending sets, so it only sends sets the user can still craft (respects the 5-level cap per game; 1-level cap for foil)
 
+- **Verified complete sets**:
+set sizes are validated against a daily-updated Steam badge database covering 15,000+ games, so buyers always receive full, craftable sets — partial stock is never sold as a set
+
+- **Steam rate-limit resilience**:
+smart inventory caching, spaced retries, and a minimal background traffic profile keep trades flowing even when Steam throttles busy IPs — built with VPS hosting in mind
+
+- **SteamApis support**:
+optionally route inventory loading through SteamApis.com (free tier available) to bypass Steam's per-IP rate limits entirely
+
 - **Per-game withdraw**:
 withdraw card sets from a specific game by AppID, with a searchable in-app game list so you never have to look up an AppID manually
 
@@ -344,6 +353,22 @@ Questions, bugs, or feature requests:
 - **Discord:** [discord.gg/XCtgnPsZFU](https://discord.gg/XCtgnPsZFU)
 - **Issues:** [github.com/stardrix/steam-card-bot-releases/issues](https://github.com/stardrix/steam-card-bot-releases/issues)
 - **Email:** support@steamtradebots.com
+
+---
+
+## Running on a VPS
+
+The bot works on datacenter/VPS hosting out of the box: inventory requests retry patiently through Steam's per-IP rate limits, recently fetched inventories are cached and reused, and background Steam traffic is kept to a minimum.
+
+### Choosing a VPS provider
+
+Steam rate-limits by IP address, and an IP's history matters: ranges belonging to popular budget hosts are shared with many other Steam bots, so they often arrive pre-throttled. For the smoothest experience we recommend a **premium VPS provider with a clean, dedicated IP** over the cheapest option — the few extra euros per month buy you an IP reputation that Steam treats far better.
+
+Before committing to a provider (or after receiving a new IP), you can test it in seconds: open `https://steamcommunity.com/inventory/<your-bot-steamid64>/753/6` in a browser on the VPS (any public inventory works — your bot's own is ideal). A JSON response means the IP is fine; an immediate error on the very first request means the IP range is throttled — ask your host for a different IP or pick another provider.
+
+### If your IP is still rate-limited
+
+If buyers frequently see "Steam seems busy", switch **Bot Settings → Inventory Method** to **SteamApis** and paste an API key from [steamapis.com](https://steamapis.com) — inventory loading then bypasses Steam's limits entirely, on any hosting. Their free tier (500 requests/month) covers a typical small bot thanks to the built-in caching.
 
 ---
 
