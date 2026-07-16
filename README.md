@@ -57,7 +57,19 @@ the bot checks a user's Steam badge level before sending sets, so it only sends 
 set sizes are validated against a daily-updated Steam badge database covering 15,000+ games, so buyers always receive full, craftable sets — partial stock is never sold as a set
 
 - **Steam rate-limit resilience**:
-smart inventory caching, spaced retries, and a minimal background traffic profile keep trades flowing even when Steam throttles busy IPs — built with VPS hosting in mind
+smart inventory caching, spaced retries, serialized mobile confirmations with shared backoff, and a minimal background traffic profile keep trades flowing even when Steam throttles busy IPs — built with VPS hosting in mind
+
+- **Safe with concurrent buyers**:
+items in unaccepted outgoing offers are reserved, so two users buying at the same moment always receive different items — the second buyer never hits "items no longer available", and is politely asked to retry when reserved stock is the bottleneck
+
+- **One active trade per user**:
+a user with an open offer who orders again gets their existing offer link back instead of a duplicate offer — no trade-offer spam (admins are exempt)
+
+- **Custom friend-list status**:
+design the bot's "Now Playing" text with live placeholders like `{sets} sets - TF2 {buy_tf2}/{sell_tf2}` — stock and rates update in real time
+
+- **One-click Support Report**:
+a button in the Logs tab bundles version, OS, bot state, and recent logs (secrets always redacted) into a single report for fast support — errors carry short reference codes with plain-language explanations
 
 - **SteamApis support**:
 optionally route inventory loading through SteamApis.com (free tier available) to bypass Steam's per-IP rate limits entirely
@@ -151,7 +163,7 @@ All secret fields are hidden behind a reveal toggle. Each bot stores its own cop
 
 ## Bot Settings
 
-Fine-tune how the bot behaves: card mode (normal, foil, or event cards), persona name, trade size limits, donation acceptance, post-trade profile comments, Steam group invites, inventory fetch method, advanced timing, blocked games, and per-game stock limits.
+Fine-tune how the bot behaves: card mode (normal, foil, or event cards), persona name, custom friend-list status text (live `{placeholder}` template for stock and rates), trade size limits, donation acceptance, post-trade profile comments, Steam group invites, inventory fetch method, advanced timing, blocked games, and per-game stock limits.
 
 ![Bot Settings](https://www.steamtradebots.com/assets/images/Bots/SteamCadBot/Bot%20Settings%20First%20haf.png)
 
@@ -335,6 +347,8 @@ Automated friend list management:
 ## Logs
 
 Raw bot log output with INFO, WARN, and ERROR entries. One-click clear. Each bot's log is separate.
+
+The **🛟 Support Report** button gathers everything support needs — app version, OS, bot state, and the recent log — into one report, copied to your clipboard and saved as a file. Passwords, secrets, and API keys are never included. If something goes wrong, send that one paste instead of screenshots.
 
 ![Logs](https://www.steamtradebots.com/assets/images/Bots/SteamCadBot/Logs.png)
 
