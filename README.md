@@ -235,6 +235,8 @@ The bot excludes its own listing from the comparison data so it never undercuts 
 
 ![Supply Feed](https://www.steamtradebots.com/assets/images/Bots/SteamCadBot/Supply%20Feed.png)
 
+- Note Automatically dont mean you do it Automatically you still need to apply it Humen safty
+
 ---
 
 ## Withdraw
